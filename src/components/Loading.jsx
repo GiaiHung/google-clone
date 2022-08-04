@@ -1,9 +1,9 @@
 import React from 'react'
-import Loader from 'react-loader-spinner'
+import { Puff } from 'react-loader-spinner'
 
 const Loading = () => (
     <div className="flex justify-center items-center ">
-        <Loader type="Puff" color="#00BFFF" height={550} width={80} />
+        <Puff ariaLabel="loading" color="white" height="550" width="80" />
     </div>
 )
 

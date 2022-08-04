@@ -4,7 +4,7 @@ import Home from './Home'
 import Results from './Results'
 
 function Routes() {
-    const routes = ['/search', '/news', '/videos', '/images']
+    const routes = ['/search', '/news', '/video', '/images']
     return (
         <div className="p-4">
             <RoutesDOM>
