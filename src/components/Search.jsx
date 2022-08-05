@@ -6,7 +6,7 @@ import { useResultContext } from '../context/resultProvider'
 function Search() {
   const [text, setText] = useState('')
   const { setSearchTerm } = useResultContext()
-  const [debouncedValue] = useDebounce(text, 1000)
+  const [debouncedValue] = useDebounce(text, 800)
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
