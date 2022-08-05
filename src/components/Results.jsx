@@ -22,7 +22,6 @@ function Results() {
       }
     }
   }, [searchTerm, pathname])
-  console.log(results)
 
   if (loading) return <Loading />
 
@@ -44,12 +43,12 @@ function Results() {
     case '/news':
       return (
         <div className="flex flex-wrap justify-between space-y-5 md:px-44">
-          {results?.entries.length > 0 &&
+          {results?.entries?.length > 0 &&
             results?.entries?.map(({ id, link, title, published, summary, source }, index) => (
               <div key={id} className="md:w-2/5 w-full">
-                <a href={link} rel="norefferer" target="_blank">
-                  {/* Wrap around a div to fix warning from htmlreact parser */}
-                  <div>
+                {/* Wrap around a div to fix warning from htmlreact parser */}
+                <div>
+                  <a href={link} rel="norefferer" target="_blank">
                     <p className="text-sm font-bold">{source.title}</p>
                     <p className="text-lg text-blue-700 dark:text-blue-300 hover:underline">
                       {title}
@@ -60,8 +59,8 @@ function Results() {
                     <p className="text-md dark:text-slate-500 text-gray-900 text-gray-900 dark:text-gray-200 break-words">
                       {published}
                     </p>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             ))}
         </div>
